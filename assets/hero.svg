@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="heroTitle heroDesc" font-family="Georgia, 'Times New Roman', serif">
+  <title id="heroTitle">Isha Joshi</title>
+  <desc id="heroDesc">Curious. Creative. Constantly learning. — I build things that think carefully, feel human, and last.</desc>
+  <defs>
+    <radialGradient id="sky" cx="30%" cy="18%" r="110%">
+      <stop offset="0%" stop-color="#4a0028"/>
+      <stop offset="45%" stop-color="#2d0014"/>
+      <stop offset="100%" stop-color="#180009"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8c97a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e8c97a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4d6d" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="crescent">
+      <circle r="40" fill="#fff"/>
+      <circle r="40" cx="18" cy="-10" fill="#000"/>
+    </mask>
+    <g id="lotus">
+      <path d="M0 0 C-9 -14 -7 -30 0 -38 C7 -30 9 -14 0 0 Z"/>
+      <path d="M0 0 C-9 -14 -7 -30 0 -38 C7 -30 9 -14 0 0 Z" transform="rotate(-32)"/>
+      <path d="M0 0 C-9 -14 -7 -30 0 -38 C7 -30 9 -14 0 0 Z" transform="rotate(32)"/>
+      <path d="M0 0 C-8 -11 -6 -24 0 -30 C6 -24 8 -11 0 0 Z" transform="rotate(-60)"/>
+      <path d="M0 0 C-8 -11 -6 -24 0 -30 C6 -24 8 -11 0 0 Z" transform="rotate(60)"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#sky)"/>
+  <rect width="1200" height="420" fill="url(#vignette)"/>
+
+  <!-- stars -->
+  <g fill="#f5edd8">
+    <circle cx="760" cy="70" r="1.4" opacity="0.8"/>
+    <circle cx="880" cy="150" r="1" opacity="0.6"/>
+    <circle cx="980" cy="60" r="1.2" opacity="0.7"/>
+    <circle cx="1120" cy="180" r="1" opacity="0.55"/>
+    <circle cx="700" cy="200" r="1" opacity="0.5"/>
+  </g>
+
+  <!-- moon -->
+  <g transform="translate(1040 110)">
+    <circle r="70" fill="url(#moonGlow)">
+      <animate attributeName="r" values="66;74;66" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="40" fill="#e8c97a" mask="url(#crescent)"/>
+  </g>
+
+  <!-- fireflies -->
+  <g fill="#e8c97a">
+    <g transform="translate(820 250)"><circle r="5" opacity="0.12"/><circle r="2"><animate attributeName="opacity" values="0.15;1;0.15" dur="4s" begin="0s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(930 300)"><circle r="5" opacity="0.12"/><circle r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" begin="1s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(1050 260)"><circle r="5" opacity="0.12"/><circle r="2"><animate attributeName="opacity" values="0.15;0.9;0.15" dur="4.5s" begin="0.6s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(700 300)"><circle r="4" opacity="0.12"/><circle r="1.8"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.6s" begin="1.6s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(1130 300)"><circle r="4" opacity="0.12"/><circle r="1.8"><animate attributeName="opacity" values="0.15;1;0.15" dur="5.4s" begin="0.3s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(600 120)"><circle r="4" opacity="0.1"/><circle r="1.6"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="4.8s" begin="2s" repeatCount="indefinite"/></circle></g>
+  </g>
+
+  <!-- waterline + lotus reflection band -->
+  <line x1="0" y1="378" x2="1200" y2="378" stroke="url(#fade)" stroke-width="1"/>
+  <g fill="url(#rose)" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.55">
+    <use href="#lotus" transform="translate(150 388) scale(1)"/>
+    <use href="#lotus" transform="translate(1010 392) scale(0.85)"/>
+    <use href="#lotus" transform="translate(1090 386) scale(1.1)"/>
+    <use href="#lotus" transform="translate(1150 394) scale(0.7)"/>
+  </g>
+
+  <!-- text block -->
+  <g>
+    <text x="92" y="120" fill="#c9a84c" font-size="15" letter-spacing="6" font-family="Verdana, Geneva, sans-serif">CURIOUS &#183; CREATIVE &#183; CONSTANTLY LEARNING</text>
+    <text x="88" y="235" fill="#f5edd8" font-size="104" letter-spacing="1">Isha Joshi</text>
+    <rect x="94" y="262" width="90" height="2" fill="#c9a84c"/>
+    <text x="94" y="308" fill="#c4a882" font-size="27" font-style="italic">I build things that think carefully, feel human, and last.</text>
+  </g>
+</svg>

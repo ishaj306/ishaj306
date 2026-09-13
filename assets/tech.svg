@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="tt td">
+  <title id="tt">Technical universe</title>
+  <desc id="td">Languages: Python, TypeScript, Java, C, SQL. AI and agents: LangChain, LangGraph, Gemini, Ollama, Whisper, Computer Vision. Web and systems: Next.js, React, Spring Boot, Tailwind, OR-Tools.</desc>
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="0%" r="120%">
+      <stop offset="0%" stop-color="#3d0020"/>
+      <stop offset="60%" stop-color="#2d0014"/>
+      <stop offset="100%" stop-color="#180009"/>
+    </radialGradient>
+    <g id="node">
+      <circle r="7" fill="#c9a84c" opacity="0.14"/>
+      <circle r="2.6" fill="#e8c97a"/>
+    </g>
+  </defs>
+  <rect width="1200" height="560" fill="url(#bg2)"/>
+
+  <!-- header -->
+  <text x="600" y="66" text-anchor="middle" fill="#c9a84c" font-size="22" letter-spacing="8" font-family="Verdana, Geneva, sans-serif">TECHNICAL UNIVERSE</text>
+  <text x="600" y="98" text-anchor="middle" fill="#c4a882" font-size="17" font-style="italic" font-family="Georgia, 'Times New Roman', serif">Not a badge wall &#8212; the tools these projects are actually built with.</text>
+  <line x1="520" y1="118" x2="680" y2="118" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+
+  <g font-family="Verdana, Geneva, sans-serif">
+    <!-- Row 1: Languages -->
+    <text x="80" y="195" fill="#c9a84c" font-size="14" letter-spacing="3">LANGUAGES</text>
+    <polyline points="360,190 550,190 740,190 930,190 1120,190" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+    <g fill="#f5edd8" font-size="15" text-anchor="middle">
+      <text x="360" y="168">Python</text>
+      <text x="550" y="168">TypeScript</text>
+      <text x="740" y="168">Java</text>
+      <text x="930" y="168">C</text>
+      <text x="1120" y="168">SQL</text>
+    </g>
+    <use href="#node" x="360" y="190"/><use href="#node" x="550" y="190"/><use href="#node" x="740" y="190"/><use href="#node" x="930" y="190"/><use href="#node" x="1120" y="190"/>
+
+    <!-- Row 2: AI & Agents -->
+    <text x="80" y="335" fill="#c9a84c" font-size="14" letter-spacing="3">AI &amp; AGENTS</text>
+    <polyline points="360,330 512,330 664,330 816,330 968,330 1120,330" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+    <g fill="#f5edd8" font-size="15" text-anchor="middle">
+      <text x="360" y="308">LangChain</text>
+      <text x="512" y="308">LangGraph</text>
+      <text x="664" y="308">Gemini</text>
+      <text x="816" y="308">Ollama</text>
+      <text x="968" y="308">Whisper</text>
+      <text x="1120" y="308">Computer Vision</text>
+    </g>
+    <use href="#node" x="360" y="330"/><use href="#node" x="512" y="330"/><use href="#node" x="664" y="330"/><use href="#node" x="816" y="330"/><use href="#node" x="968" y="330"/><use href="#node" x="1120" y="330"/>
+
+    <!-- Row 3: Web & Systems -->
+    <text x="80" y="475" fill="#c9a84c" font-size="14" letter-spacing="3">WEB &amp; SYSTEMS</text>
+    <polyline points="360,470 550,470 740,470 930,470 1120,470" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+    <g fill="#f5edd8" font-size="15" text-anchor="middle">
+      <text x="360" y="448">Next.js</text>
+      <text x="550" y="448">React</text>
+      <text x="740" y="448">Spring Boot</text>
+      <text x="930" y="448">Tailwind</text>
+      <text x="1120" y="448">OR-Tools</text>
+    </g>
+    <use href="#node" x="360" y="470"/><use href="#node" x="550" y="470"/><use href="#node" x="740" y="470"/><use href="#node" x="930" y="470"/><use href="#node" x="1120" y="470"/>
+  </g>
+
+  <!-- twinkle accents -->
+  <g fill="#e8c97a">
+    <circle cx="740" cy="190" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="664" cy="330" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="6s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="470" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
