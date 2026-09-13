@@ -9,12 +9,21 @@
       <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <line x1="140" y1="25" x2="560" y2="25" stroke="url(#dl)" stroke-width="1"/>
-  <line x1="640" y1="25" x2="1060" y2="25" stroke="url(#dr)" stroke-width="1"/>
-  <g transform="translate(600 25)" fill="none" stroke="#c9a84c" stroke-width="1.4">
-    <path d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z" fill="#c9a84c" fill-opacity="0.25"/>
-    <circle cx="0" cy="0" r="2.4" fill="#ff4d6d" stroke="none"/>
-    <circle cx="-40" cy="0" r="1.6" fill="#c9a84c" stroke="none" opacity="0.7"/>
-    <circle cx="40" cy="0" r="1.6" fill="#c9a84c" stroke="none" opacity="0.7"/>
+  <line x1="140" y1="25" x2="560" y2="25" stroke="url(#dl)" stroke-width="1">
+    <animate attributeName="x1" values="560;140" dur="1s" begin="0.1s" fill="freeze"/>
+  </line>
+  <line x1="640" y1="25" x2="1060" y2="25" stroke="url(#dr)" stroke-width="1">
+    <animate attributeName="x2" values="640;1060" dur="1s" begin="0.1s" fill="freeze"/>
+  </line>
+  <g transform="translate(600 25)">
+    <path d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z" fill="#c9a84c" fill-opacity="0.3" stroke="#c9a84c" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="26s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="0" cy="0" r="2.4" fill="#ff4d6d">
+      <animate attributeName="r" values="2.4;3.4;2.4" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.55;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-40" cy="0" r="1.6" fill="#c9a84c" opacity="0.7"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="40" cy="0" r="1.6" fill="#c9a84c" opacity="0.7"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle>
   </g>
 </svg>

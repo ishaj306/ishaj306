@@ -15,53 +15,67 @@
   <rect width="1200" height="560" fill="url(#bg2)"/>
 
   <!-- header -->
-  <text x="600" y="66" text-anchor="middle" fill="#c9a84c" font-size="22" letter-spacing="8" font-family="Verdana, Geneva, sans-serif">TECHNICAL UNIVERSE</text>
-  <text x="600" y="98" text-anchor="middle" fill="#c4a882" font-size="17" font-style="italic" font-family="Georgia, 'Times New Roman', serif">Not a badge wall &#8212; the tools these projects are actually built with.</text>
-  <line x1="520" y1="118" x2="680" y2="118" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+  <g opacity="0">
+    <text x="600" y="66" text-anchor="middle" fill="#c9a84c" font-size="22" letter-spacing="8" font-family="Verdana, Geneva, sans-serif">TECHNICAL UNIVERSE</text>
+    <text x="600" y="98" text-anchor="middle" fill="#c4a882" font-size="17" font-style="italic" font-family="Georgia, 'Times New Roman', serif">Not a badge wall &#8212; the tools these projects are actually built with.</text>
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="0.1s" fill="freeze"/>
+  </g>
+  <line x1="600" y1="118" x2="600" y2="118" stroke="#c9a84c" stroke-width="1" opacity="0.5">
+    <animate attributeName="x1" values="600;520" dur="0.8s" begin="0.6s" fill="freeze"/>
+    <animate attributeName="x2" values="600;680" dur="0.8s" begin="0.6s" fill="freeze"/>
+  </line>
 
   <g font-family="Verdana, Geneva, sans-serif">
     <!-- Row 1: Languages -->
-    <text x="80" y="195" fill="#c9a84c" font-size="14" letter-spacing="3">LANGUAGES</text>
-    <polyline points="360,190 550,190 740,190 930,190 1120,190" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
-    <g fill="#f5edd8" font-size="15" text-anchor="middle">
-      <text x="360" y="168">Python</text>
-      <text x="550" y="168">TypeScript</text>
-      <text x="740" y="168">Java</text>
-      <text x="930" y="168">C</text>
-      <text x="1120" y="168">SQL</text>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.9s" begin="0.7s" fill="freeze"/>
+      <text x="80" y="195" fill="#c9a84c" font-size="14" letter-spacing="3">LANGUAGES</text>
+      <polyline points="360,190 550,190 740,190 930,190 1120,190" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+      <g fill="#f5edd8" font-size="15" text-anchor="middle">
+        <text x="360" y="168">Python</text><text x="550" y="168">TypeScript</text><text x="740" y="168">Java</text><text x="930" y="168">C</text><text x="1120" y="168">SQL</text>
+      </g>
+      <use href="#node" x="360" y="190"/><use href="#node" x="550" y="190"/><use href="#node" x="740" y="190"/><use href="#node" x="930" y="190"/><use href="#node" x="1120" y="190"/>
+      <circle r="3.4" fill="#f5edd8">
+        <animateMotion path="M360 190 L1120 190" dur="5s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" begin="2s" repeatCount="indefinite"/>
+      </circle>
     </g>
-    <use href="#node" x="360" y="190"/><use href="#node" x="550" y="190"/><use href="#node" x="740" y="190"/><use href="#node" x="930" y="190"/><use href="#node" x="1120" y="190"/>
 
     <!-- Row 2: AI & Agents -->
-    <text x="80" y="335" fill="#c9a84c" font-size="14" letter-spacing="3">AI &amp; AGENTS</text>
-    <polyline points="360,330 512,330 664,330 816,330 968,330 1120,330" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
-    <g fill="#f5edd8" font-size="15" text-anchor="middle">
-      <text x="360" y="308">LangChain</text>
-      <text x="512" y="308">LangGraph</text>
-      <text x="664" y="308">Gemini</text>
-      <text x="816" y="308">Ollama</text>
-      <text x="968" y="308">Whisper</text>
-      <text x="1120" y="308">Computer Vision</text>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.9s" begin="1.1s" fill="freeze"/>
+      <text x="80" y="335" fill="#c9a84c" font-size="14" letter-spacing="3">AI &amp; AGENTS</text>
+      <polyline points="360,330 512,330 664,330 816,330 968,330 1120,330" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+      <g fill="#f5edd8" font-size="15" text-anchor="middle">
+        <text x="360" y="308">LangChain</text><text x="512" y="308">LangGraph</text><text x="664" y="308">Gemini</text><text x="816" y="308">Ollama</text><text x="968" y="308">Whisper</text><text x="1120" y="308">Computer Vision</text>
+      </g>
+      <use href="#node" x="360" y="330"/><use href="#node" x="512" y="330"/><use href="#node" x="664" y="330"/><use href="#node" x="816" y="330"/><use href="#node" x="968" y="330"/><use href="#node" x="1120" y="330"/>
+      <circle r="3.4" fill="#f5edd8">
+        <animateMotion path="M360 330 L1120 330" dur="6s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="6s" begin="3s" repeatCount="indefinite"/>
+      </circle>
     </g>
-    <use href="#node" x="360" y="330"/><use href="#node" x="512" y="330"/><use href="#node" x="664" y="330"/><use href="#node" x="816" y="330"/><use href="#node" x="968" y="330"/><use href="#node" x="1120" y="330"/>
 
     <!-- Row 3: Web & Systems -->
-    <text x="80" y="475" fill="#c9a84c" font-size="14" letter-spacing="3">WEB &amp; SYSTEMS</text>
-    <polyline points="360,470 550,470 740,470 930,470 1120,470" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
-    <g fill="#f5edd8" font-size="15" text-anchor="middle">
-      <text x="360" y="448">Next.js</text>
-      <text x="550" y="448">React</text>
-      <text x="740" y="448">Spring Boot</text>
-      <text x="930" y="448">Tailwind</text>
-      <text x="1120" y="448">OR-Tools</text>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.9s" begin="1.5s" fill="freeze"/>
+      <text x="80" y="475" fill="#c9a84c" font-size="14" letter-spacing="3">WEB &amp; SYSTEMS</text>
+      <polyline points="360,470 550,470 740,470 930,470 1120,470" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.22"/>
+      <g fill="#f5edd8" font-size="15" text-anchor="middle">
+        <text x="360" y="448">Next.js</text><text x="550" y="448">React</text><text x="740" y="448">Spring Boot</text><text x="930" y="448">Tailwind</text><text x="1120" y="448">OR-Tools</text>
+      </g>
+      <use href="#node" x="360" y="470"/><use href="#node" x="550" y="470"/><use href="#node" x="740" y="470"/><use href="#node" x="930" y="470"/><use href="#node" x="1120" y="470"/>
+      <circle r="3.4" fill="#f5edd8">
+        <animateMotion path="M360 470 L1120 470" dur="5.5s" begin="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.5s" begin="2.6s" repeatCount="indefinite"/>
+      </circle>
     </g>
-    <use href="#node" x="360" y="470"/><use href="#node" x="550" y="470"/><use href="#node" x="740" y="470"/><use href="#node" x="930" y="470"/><use href="#node" x="1120" y="470"/>
   </g>
 
   <!-- twinkle accents -->
   <g fill="#e8c97a">
-    <circle cx="740" cy="190" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5s" repeatCount="indefinite"/></circle>
-    <circle cx="664" cy="330" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="6s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="740" cy="470" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="190" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="664" cy="330" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="6s" begin="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="470" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="5.5s" begin="2.8s" repeatCount="indefinite"/></circle>
   </g>
 </svg>

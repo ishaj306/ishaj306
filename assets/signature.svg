@@ -16,6 +16,10 @@
       <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="shoot2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8c97a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f5edd8" stop-opacity="0.95"/>
+    </linearGradient>
     <mask id="crescent2">
       <circle r="22" fill="#fff"/>
       <circle r="22" cx="10" cy="-6" fill="#000"/>
@@ -24,21 +28,37 @@
   <rect width="1200" height="240" fill="url(#bg3)"/>
 
   <g fill="#f5edd8">
-    <circle cx="470" cy="70" r="1.3" opacity="0.7"/>
-    <circle cx="760" cy="60" r="1.1" opacity="0.6"/>
-    <circle cx="660" cy="95" r="1" opacity="0.5"/>
-    <circle cx="540" cy="110" r="1" opacity="0.5"/>
+    <circle cx="470" cy="70" r="1.3" opacity="0.7"><animate attributeName="opacity" values="0.7;0.15;0.7" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="60" r="1.1" opacity="0.6"><animate attributeName="opacity" values="0.6;0.15;0.6" dur="5.2s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="95" r="1" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="110" r="1" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="6s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="120" r="1" opacity="0.5"><animate attributeName="opacity" values="0.5;0.12;0.5" dur="5s" begin="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- shooting star -->
+  <g opacity="0">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="url(#shoot2)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="40" cy="0" r="1.6" fill="#f5edd8"/>
+    <animateTransform attributeName="transform" type="translate" values="430,45; 690,120" dur="1.2s" begin="5s;15s" fill="remove"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.7;1" dur="1.2s" begin="5s;15s"/>
   </g>
 
   <!-- moon -->
   <g transform="translate(600 72)">
     <circle r="42" fill="url(#mg2)">
       <animate attributeName="r" values="38;46;38" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
     </circle>
     <circle r="22" fill="#e8c97a" mask="url(#crescent2)"/>
   </g>
 
-  <text x="600" y="165" text-anchor="middle" fill="#f5edd8" font-size="30" font-style="italic" font-family="Georgia, 'Times New Roman', serif">The moon does not compete with the stars. It simply rises.</text>
-  <text x="600" y="205" text-anchor="middle" fill="#c9a84c" font-size="18" letter-spacing="4" font-family="Verdana, Geneva, sans-serif">&#8212; ISHA</text>
-  <line x1="500" y1="222" x2="700" y2="222" stroke="url(#fade2)" stroke-width="1"/>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1.4s" begin="0.4s" fill="freeze"/>
+    <text x="600" y="165" text-anchor="middle" fill="#f5edd8" font-size="30" font-style="italic" font-family="Georgia, 'Times New Roman', serif">The moon does not compete with the stars. It simply rises.</text>
+    <text x="600" y="205" text-anchor="middle" fill="#c9a84c" font-size="18" letter-spacing="4" font-family="Verdana, Geneva, sans-serif">&#8212; ISHA</text>
+  </g>
+  <line x1="600" y1="222" x2="600" y2="222" stroke="url(#fade2)" stroke-width="1">
+    <animate attributeName="x1" values="600;500" dur="1s" begin="1.4s" fill="freeze"/>
+    <animate attributeName="x2" values="600;700" dur="1s" begin="1.4s" fill="freeze"/>
+  </line>
 </svg>
