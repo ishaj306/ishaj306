@@ -1,24 +1,23 @@
-name: Refresh activity panel
+name: Render field notes
 
 on:
-  schedule:
-    - cron: "17 4 * * *"   # daily at 04:17 UTC
-  workflow_dispatch:         # run on demand from the Actions tab
+  workflow_dispatch:          # run on demand from the Actions tab
   push:
     branches: [main]
     paths:
-      - scripts/generate_activity.py
+      - data/activity.json
+      - scripts/render_activity.py
       - .github/workflows/refresh-activity.yml
 
 permissions:
   contents: write
 
 concurrency:
-  group: refresh-activity
+  group: render-field-notes
   cancel-in-progress: true
 
 jobs:
-  refresh:
+  render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,19 +26,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate assets/activity.svg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_activity.py
+      - name: Render Field Notes and archive
+        run: python scripts/render_activity.py
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- assets/activity.svg; then
-            echo "No change in activity panel."
+          if git diff --quiet -- README.md ACTIVITY.md; then
+            echo "Field notes already up to date."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/activity.svg
-          git commit -m "chore: refresh activity panel [skip ci]"
+          git add README.md ACTIVITY.md
+          git commit -m "chore: render field notes [skip ci]"
           git push
