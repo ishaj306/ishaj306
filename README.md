@@ -142,9 +142,7 @@ The things that make the work what it is — not hobbies *around* the work.
 
 <div align="center">
 
-<img height="165" alt="Isha's GitHub statistics" src="https://github-readme-stats.vercel.app/api?username=ishaj306&show_icons=true&hide_border=true&hide=contribs&bg_color=2d0014&title_color=c9a84c&text_color=f5edd8&icon_color=e8c97a" />
-&nbsp;
-<img height="165" alt="Most-used languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ishaj306&layout=compact&hide_border=true&langs_count=8&bg_color=2d0014&title_color=c9a84c&text_color=f5edd8" />
+<img src="assets/activity.svg" alt="The work, in motion. Language distribution: TypeScript 38%, Java 35%, Python 14%, C 4%, JavaScript 3%, other 6%. Recently active repositories: live-meeting-notes, HastaMudra, SkillScope, AcadFlow, aura." width="100%" />
 
 </div>
 
